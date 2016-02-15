@@ -1,0 +1,18 @@
+>>> def print_matches(matchtext):
+...     print "Looking for", matchtext
+...     while True:
+...         line = (yield)          # get a line of text; yield control until input is sent
+...         if matchtext in line:
+...             print line
+... 
+
+>>> matcher = print_matches("python")
+>>> matcher.next()                  # Advance to the first yield statement
+Looking for python                  # Proves that we've advanced to the yield statement in print_matches()
+>>> matcher.send("Hello World")     # Send our input to print_matches()
+>>> matcher.send("python is cool")
+python is cool
+>>> matcher.send("yow!")
+>>> matcher.close()
+>>> 
+
