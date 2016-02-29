@@ -1,0 +1,17 @@
+The program produces the following output.
+
+a = 37
+refcount of a = 9
+b = a
+refcount of a = 10
+c = []
+c.append(b)
+refcount of a = 11
+b = 42
+refcount of a = 10
+c[0] = 2.0
+refcount of a = 9
+del a
+
+Every new reference increases the reference count. Every assignment to new value
+or 'del' decreases the refcount.
