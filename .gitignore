@@ -1,0 +1,19 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# ---- Other files -----
+
+# Vim
+*~
+*.swp
+*.swo
+
+# Might include cscope.out or just temporary output files
+*.out
+
+# Any temporary files
+*.tmp
