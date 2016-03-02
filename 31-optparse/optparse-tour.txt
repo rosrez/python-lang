@@ -1,0 +1,38 @@
+Sample output of optparse-tour.py:
+
+@@
+1. RUN WITH THE -h OPTION (OPTION PROVIDED BY DEFAULT)
+
+$ python optparse-tour.py -h
+Usage: optparse-tour.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -t                    
+  -o OUTFILE, --outfile=OUTFILE
+  -d DEBUG, --debuglevel=DEBUG
+  --speed=SPEEED        
+  --coord=COORD         
+  --novice              
+  --guru                
+
+@@
+2. RUN WITH ALL OPTIONS INCLUDED ALONG WITH A REGULAR ARGUMENT
+
+$ python optparse-tour.py -t -o outfile.dat -d 3 --coord 3 4 --speed=ludicrous blah
+tracing  : True
+outfile  : outfile.dat
+debug    : 3
+speed    : fast
+coord    : (3, 4)
+mode     : novice
+args     : ['blah']
+
+@@
+3. RUN WITH A WRONG ARGUMENT TO ONE OF THE OPTIONS
+
+$ python optparse-tour.py --speed=insane
+Usage: optparse-tour.py [options]
+
+optparse-tour.py: error: option --speed: invalid choice: 'insane' (choose from 'slow', 'fast', 'ludicrous')
+
