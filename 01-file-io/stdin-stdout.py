@@ -6,7 +6,7 @@ import sys
 sys.stdout.write("Enter your name: ")
 # sys.stdin is a file object, we're invoking its readline() method
 name = sys.stdin.readline()
- # note the trailing comma - readline preserves trailing the newline
+ # note the trailing comma - readline preserves the trailing newline
 print "Hello", name,  
 
 # In Python 2, the above is equivalent to:
