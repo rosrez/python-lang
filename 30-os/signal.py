@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os, signal
+import signal
 
 def handler(signum, frame):
     print "Caught SIGALRM"
