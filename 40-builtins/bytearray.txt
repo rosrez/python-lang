@@ -1,0 +1,12 @@
+Sample run of bytearray.py
+
+bytearray objects are mutable byte arrays that behave like other sequence objects,
+i.e. support indexing, slicing, etc. They also support some string-like operations
+like find(), replace(), split().
+
+$ python bytearray.py 
+Hello
+Hello World
+Found 'World' -- replacing with 'Stranger'
+Hello Stranger
+

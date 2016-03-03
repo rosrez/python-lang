@@ -1,0 +1,9 @@
+Sample run of bin.py.
+
+bin(x)
+Returns a string containing the binary representation of the integer x.
+
+$ python bin.py
+bin(True) = 0b1
+bin(305419896) = 0b10010001101000101011001111000
+bin(18364758544493064720) = 0b1111111011011100101110101001100001110110010101000011001000010000

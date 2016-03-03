@@ -1,0 +1,21 @@
+Sample run of all-any.py.
+
+Demonstrates the use of all() and any() builtin functions.
+
+all(s)
+Returns True if all of the values in the iterable s evaluate to True.
+
+any(s)
+Returns True if any of the values in the iterable s evaluate as True.
+
+Note that s can contain any objects.
+
+$ python all-any.py 
+all([1, 1, 1, 1, 1, 1, 1, 1]) = True
+any([1, 1, 1, 1, 1, 1, 1, 1]) = True
+all([0, 0, 0, 0, 1, 0]) = False
+any([0, 0, 0, 0, 1, 0]) = True
+all([0, 0, 0, 0]) = False
+any([0, 0, 0, 0]) = False
+all([[0, 0, 0], False, 0]) = False      
+any([[0, 0, 0], False, 0]) = True       # non-empty list of all zeroes at position [0]: evaluates to True
