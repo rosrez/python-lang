@@ -3,17 +3,23 @@
 import sys, subprocess
 
 def usage():
-    print "Usage: %s command" % sys.argv[0]
+    print "Usage: %s filter command" % sys.argv[0]
     sys.exit(1)
 
-if len(sys.argv) < 2:
+if len(sys.argv) < 3:
     usage()
 
-p = subprocess.Popen(sys.argv[1:], shell=True, # stdin=subprocess.PIPE,
-       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-out, err = p.communicate()
+filter = sys.argv[1]
+cmdargs = sys.argv[2:]
 
-print "Command output ----"
-print out
-print "Command error ----"
-print err
+p = subprocess.Popen(cmdargs, shell=False,
+       stdout=subprocess.PIPE)
+
+out = p.stdout
+
+for l in out:
+    if filter in l:
+        print l,
+
+
+
